@@ -659,9 +659,9 @@ export default function Home() {\n
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-6 text-center">
-        <p className="font-semibold">Tailwind CSS Tutorial Blog</p>
+        <p className="font-semibold">Tailwind CSS Tutorial Blog By Anicett Jeff Takayama</p>
         <p className="text-sm text-gray-400">
-          Built using Next.js, Tailwind CSS, GitHub, and Vercel
+          Built using Next.js, Tailwind CSS, GitHub, VS Code, and Vercel
         </p>
       </footer>
 
