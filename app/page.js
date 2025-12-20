@@ -443,13 +443,226 @@ export default function Home() {\n
 
         {/* Conclusion */}
         <section>
-          <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
+          <h2 className="text-2xl font-bold mb-4 text-black">Conclusion</h2>
           <p className="text-gray-700 leading-relaxed">
             By following these steps, Tailwind CSS is successfully used inside a
             Next.js application. This approach is efficient, beginner-friendly,
             and follows industry best practices for modern web development.
           </p>
         </section>
+
+        <section className="bg-white p-6 rounded-lg shadow">
+  <h2 className="text-2xl font-bold text-indigo-600 mb-4">Tailwind Quick Demo</h2>
+  <p className="text-gray-700 mb-6">
+    Each element below has its own code block and copy button. Labels show which utilities are applied.
+  </p>
+
+  {/* Buttons Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Buttons</h3>
+    <div className="flex gap-4 flex-wrap items-center mb-3">
+      <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition">
+        Primary
+      </button>
+      <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition">
+        Success
+      </button>
+    </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition">Primary</button>
+<button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition">Success</button>`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "button-demo",
+`<button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition">Primary</button>
+<button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition">Success</button>`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["button-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Color Palette Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Color Palette</h3>
+    <div className="grid grid-cols-6 gap-4 mb-3">
+      <div className="w-full h-16 bg-red-500 rounded flex items-end justify-center text-white text-xs">red-500</div>
+      <div className="w-full h-16 bg-blue-500 rounded flex items-end justify-center text-white text-xs">blue-500</div>
+      <div className="w-full h-16 bg-green-500 rounded flex items-end justify-center text-white text-xs">green-500</div>
+    </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<div class="w-full h-16 bg-red-500 rounded"></div>
+<div class="w-full h-16 bg-blue-500 rounded"></div>
+<div class="w-full h-16 bg-green-500 rounded"></div>`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "color-demo",
+`<div class="w-full h-16 bg-red-500 rounded"></div>
+<div class="w-full h-16 bg-blue-500 rounded"></div>
+<div class="w-full h-16 bg-green-500 rounded"></div>`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["color-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Typography Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Typography</h3>
+    <p className="text-xl font-bold text-gray-900 mb-2">Heading 1 - Extra Large <span className="text-xs text-gray-400 ml-2">text-xl font-bold</span></p>
+    <p className="text-lg text-gray-700 italic mb-2">Italic text example <span className="text-xs text-gray-400 ml-2">italic</span></p>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<p class="text-xl font-bold text-gray-900">Heading 1 - Extra Large</p>
+<p class="text-lg text-gray-700 italic">Italic text example</p>`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "typography-demo",
+`<p class="text-xl font-bold text-gray-900">Heading 1 - Extra Large</p>
+<p class="text-lg text-gray-700 italic">Italic text example</p>`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["typography-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Grid Layout Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Grid Layout</h3>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
+      <div className="bg-blue-400 text-white p-4 rounded text-center">Card 1</div>
+      <div className="bg-green-400 text-white p-4 rounded text-center">Card 2</div>
+      <div className="bg-purple-400 text-white p-4 rounded text-center">Card 3</div>
+    </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div class="bg-blue-400 p-4 rounded text-white">Card 1</div>
+  <div class="bg-green-400 p-4 rounded text-white">Card 2</div>
+  <div class="bg-purple-400 p-4 rounded text-white">Card 3</div>
+</div>`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "grid-demo",
+`<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div class="bg-blue-400 p-4 rounded text-white">Card 1</div>
+  <div class="bg-green-400 p-4 rounded text-white">Card 2</div>
+  <div class="bg-purple-400 p-4 rounded text-white">Card 3</div>
+</div>`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["grid-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Flex Layout Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Flex Layout</h3>
+    <div className="flex flex-wrap gap-4 justify-center mb-3">
+      <div className="bg-red-500 text-white p-4 rounded">Item 1</div>
+      <div className="bg-orange-500 text-white p-4 rounded">Item 2</div>
+      <div className="bg-yellow-500 text-white p-4 rounded">Item 3</div>
+    </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<div class="flex flex-wrap gap-4 justify-center">
+  <div class="bg-red-500 p-4 rounded text-white">Item 1</div>
+  <div class="bg-orange-500 p-4 rounded text-white">Item 2</div>
+  <div class="bg-yellow-500 p-4 rounded text-white">Item 3</div>
+</div>`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "flex-demo",
+`<div class="flex flex-wrap gap-4 justify-center">
+  <div class="bg-red-500 p-4 rounded text-white">Item 1</div>
+  <div class="bg-orange-500 p-4 rounded text-white">Item 2</div>
+  <div class="bg-yellow-500 p-4 rounded text-white">Item 3</div>
+</div>`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["flex-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Images Demo */}
+  <div className="mb-6">
+    <h3 className="text-xl font-bold mb-2 text-black">Images</h3>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
+      <div className="flex flex-col items-center">
+        <img src="https://i.pinimg.com/736x/b5/b2/54/b5b254178045d26b5658de201a8bcd7b.jpg" className="rounded shadow-md" />
+        <span className="text-xs text-gray-400 mt-1">rounded shadow-md</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/fb4b69163535371.Y3JvcCw2MDYsNDc0LDQwNywyMzU.png" className="rounded-full shadow-md" />
+        <span className="text-xs text-gray-400 mt-1">rounded-full shadow-md</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ORxW1tpLXm1LdO9aYLLROgTaPjn2FKBBeQ&s" className="rounded-lg shadow-2xl" />
+        <span className="text-xs text-gray-400 mt-1">rounded-lg shadow-2xl</span>
+      </div>
+    </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg overflow-hidden shadow mb-2">
+      <pre className="text-gray-100 p-4 flex-1 overflow-x-auto">
+        <code>{`<img src="..." class="rounded shadow-md" />
+<img src="..." class="rounded-full shadow-md" />
+<img src="..." class="rounded-lg shadow-2xl" />`}</code>
+      </pre>
+      <div className="flex items-center justify-center bg-gray-800 p-2 border-l border-gray-700">
+        <button
+          onClick={() =>
+            copyToClipboard(
+              "images-demo",
+`<img src="..." class="rounded shadow-md" />
+<img src="..." class="rounded-full shadow-md" />
+<img src="..." class="rounded-lg shadow-2xl" />`
+            )
+          }
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1 px-4 rounded transition"
+        >
+          {copied["images-demo"] ? "Copied!" : "Copy"}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       </main>
 
