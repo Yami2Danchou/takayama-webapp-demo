@@ -40,22 +40,34 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Step 1 */}
-        <section className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-bold text-indigo-600 mb-2">
-            Step 1: Create a GitHub Repository
+              {/* Step 1 */}
+        <section>
+          <h3 className="text-xl font-bold mb-2 text-black">
+            Step 1: Download Node.js, GitHub Desktop, Git, And VS Code
           </h3>
           <p className="text-gray-700">
-            First, open GitHub Desktop and sign in to your account. Create a new
-            repository named <strong>lastname-webapp-demo</strong> and publish it to
-            GitHub. This repository will store all your project files.
+            Make sure you have Node.js, GitHub Desktop, VS Code and Git installed on your computer.
           </p>
         </section>
 
         {/* Step 2 */}
+        <section className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-xl font-bold text-indigo-600 mb-2">
+            Step 2: Create a GitHub Repository
+          </h3>
+          <p className="text-gray-700">
+            First, open GitHub Desktop and sign in to your account. Create a new
+            repository with your preferred name and publish it to
+            GitHub. This repository will store all your project files.
+          </p>
+        </section>
+
+     
+
+        {/* Step 3 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
-            Step 2: Open the Project in Visual Studio Code
+            Step 3: Open the Project in Visual Studio Code
           </h3>
           <p className="text-gray-700">
             In GitHub Desktop, click <strong>Open in Visual Studio Code</strong>.
@@ -64,10 +76,13 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Step 3 */}
+       
+     
+
+ {/* Step 4 */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
-            Step 3: Verify Installed Tools
+            Step 4: Verify Installed Tools
           </h3>
           <p className="text-gray-700 mb-3">
             Before installing Tailwind CSS, verify that the required tools are installed.
@@ -77,17 +92,6 @@ export default function Home() {
             npm -v <br />
             git -v
           </div>
-        </section>
-
-        {/* Step 4 */}
-        <section>
-          <h3 className="text-xl font-bold mb-2 text-black">
-            Step 4: Download the Activity Materials
-          </h3>
-          <p className="text-gray-700">
-            Download the starter files provided in the activity materials. These files
-            serve as a guide and help speed up the development process.
-          </p>
         </section>
 
         {/* Step 5 */}
@@ -335,31 +339,75 @@ export default function Home() {\n
 
         {/* Step 7 */}
         <section className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-bold text-indigo-600 mb-2">
-            Step 7: Use Tailwind Utility Classes
-          </h3>
-          <p className="text-gray-700 mb-4">
-            Tailwind styles elements using utility classes such as colors, spacing,
-            and typography.
-          </p>
+  <h3 className="text-xl font-bold text-indigo-600 mb-2">
+    Step 7: Use Tailwind Utility Classes
+  </h3>
+  <p className="text-gray-700 mb-4">
+    Tailwind styles elements using utility classes such as colors, spacing,
+    typography, borders, shadows, and flex/grid layouts. Experiment with them to see instant results.
+  </p>
 
-          <div className="flex gap-4 flex-wrap">
-            <div className="bg-blue-500 text-white p-4 rounded">
-              bg-blue-500
-            </div>
-            <div className="bg-green-500 text-white p-4 rounded">
-              p-4 spacing
-            </div>
-            <div className="text-xl font-bold text-indigo-600">
-              text-xl font-bold
-            </div>
-          </div>
-        </section>
+  <div className="flex gap-4 flex-wrap">
+    <div className="bg-blue-500 text-white p-4 rounded">bg-blue-500</div>
+    <div className="bg-green-500 text-white p-4 rounded">p-4 spacing</div>
+    <div className="text-xl font-bold text-indigo-600">text-xl font-bold</div>
+    <div className="border-2 border-gray-400 p-4 rounded">border-2</div>
+    <div className="shadow-lg p-4 rounded bg-white">shadow-lg</div>
+    <div className="flex justify-center items-center bg-gray-200 p-4 rounded w-32 h-32">
+      flex + justify-center + items-center
+    </div>
+    <div className="grid grid-cols-2 gap-2 bg-gray-100 p-4 rounded w-32">
+      <div className="bg-red-400 h-8"></div>
+      <div className="bg-blue-400 h-8"></div>
+      <div className="bg-green-400 h-8"></div>
+      <div className="bg-yellow-400 h-8"></div>
+    </div>
+    <button className="bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded transition">
+      Hover Effect
+    </button>
+  </div>
+</section>
+
+
+
 
         {/* Step 8 */}
+        <section className="bg-white p-6 rounded-lg shadow">
+  <h3 className="text-xl font-bold text-indigo-600 mb-2">
+    Step 8: Apply Responsive Design
+  </h3>
+  <p className="text-gray-700 mb-4">
+    Tailwind uses responsive prefixes such as <strong>sm</strong>, <strong>md</strong>, <strong>lg</strong>, and <strong>xl</strong> to style elements at different screen sizes.
+  </p>
+
+  {/* Responsive Text */}
+  <div className="bg-indigo-500 text-white p-4 rounded text-center
+                  text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl mb-6">
+    Responsive Text Example
+  </div>
+
+  {/* Responsive Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="bg-red-400 p-4 rounded text-white text-center">Col 1</div>
+    <div className="bg-blue-400 p-4 rounded text-white text-center">Col 2</div>
+    <div className="bg-green-400 p-4 rounded text-white text-center">Col 3</div>
+    <div className="bg-yellow-400 p-4 rounded text-white text-center">Col 4</div>
+  </div>
+
+  {/* Responsive Image */}
+  <div className="mt-6">
+    <img 
+      src="https://via.placeholder.com/600x400"
+      alt="Responsive"
+      className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 rounded mx-auto"
+    />
+  </div>
+</section>
+
+  {/* Step 9 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
-            Step 8: Run the Web App Locally
+            Step 9: Run the Web App Locally
           </h3>
           <p className="text-gray-700 mb-3">
             Start the development server to check if Tailwind CSS is working properly.
@@ -369,20 +417,7 @@ export default function Home() {\n
           </div>
         </section>
 
-        {/* Step 9 */}
-        <section className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-xl font-bold text-indigo-600 mb-2">
-            Step 9: Apply Responsive Design
-          </h3>
-          <p className="text-gray-700 mb-4">
-            Tailwind uses responsive prefixes such as <strong>md</strong> and
-            <strong> lg</strong>.
-          </p>
-          <div className="bg-indigo-500 text-white p-4 rounded text-center
-                          text-sm md:text-lg lg:text-2xl">
-            Responsive Text Example
-          </div>
-        </section>
+
 
         {/* Step 10 */}
         <section>
