@@ -1,11 +1,9 @@
-"use client"; // Required for useState in Next.js 13+
-
+"use client"; 
 import { useState } from "react";
 
 export default function Home() {
-  const [copied, setCopied] = useState({}); // track which code block is copied
+  const [copied, setCopied] = useState({}); 
 
-  // Utility function to copy text
   const copyToClipboard = (id, text) => {
     navigator.clipboard.writeText(text);
     setCopied({ ...copied, [id]: true });
@@ -14,7 +12,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-100">
-      {/* Header */}
       <header className="bg-white shadow-md">
         <div className="max-w-6xl mx-auto px-6 py-6 text-center">
           <h1 className="text-4xl font-bold text-indigo-600">
@@ -26,10 +23,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-        {/* Introduction */}
         <section>
           <h2 className="text-2xl font-bold mb-4 text-black">Introduction</h2>
           <p className="text-gray-700 leading-relaxed">
@@ -40,7 +35,6 @@ export default function Home() {
           </p>
         </section>
 
-              {/* Step 1 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
             Step 1: Download Node.js, GitHub Desktop, Git, And VS Code
@@ -50,7 +44,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Step 2 */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
             Step 2: Create a GitHub Repository
@@ -62,9 +55,6 @@ export default function Home() {
           </p>
         </section>
 
-     
-
-        {/* Step 3 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
             Step 3: Open the Project in Visual Studio Code
@@ -76,10 +66,6 @@ export default function Home() {
           </p>
         </section>
 
-       
-     
-
- {/* Step 4 */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
             Step 4: Verify Installed Tools
@@ -94,7 +80,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Step 5 */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
             Step 5: Create a New Next.js Project
@@ -108,7 +93,6 @@ export default function Home() {
           </div>
         </section>
 
-              {/* Step 6: Create Next.js Project */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
             Step 6: Add the Boilerplate Page
@@ -337,7 +321,6 @@ export default function Home() {\n
         </section>
 
 
-        {/* Step 7 */}
         <section className="bg-white p-6 rounded-lg shadow">
   <h3 className="text-xl font-bold text-indigo-600 mb-2">
     Step 7: Use Tailwind Utility Classes
@@ -368,10 +351,6 @@ export default function Home() {\n
   </div>
 </section>
 
-
-
-
-        {/* Step 8 */}
         <section className="bg-white p-6 rounded-lg shadow">
   <h3 className="text-xl font-bold text-indigo-600 mb-2">
     Step 8: Apply Responsive Design
@@ -380,13 +359,11 @@ export default function Home() {\n
     Tailwind uses responsive prefixes such as <strong>sm</strong>, <strong>md</strong>, <strong>lg</strong>, and <strong>xl</strong> to style elements at different screen sizes.
   </p>
 
-  {/* Responsive Text */}
   <div className="bg-indigo-500 text-white p-4 rounded text-center
                   text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl mb-6">
     Responsive Text Example
   </div>
 
-  {/* Responsive Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <div className="bg-red-400 p-4 rounded text-white text-center">Col 1</div>
     <div className="bg-blue-400 p-4 rounded text-white text-center">Col 2</div>
@@ -397,7 +374,6 @@ export default function Home() {\n
   
 </section>
 
-  {/* Step 9 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
             Step 9: Run the Web App Locally
@@ -410,9 +386,6 @@ export default function Home() {\n
           </div>
         </section>
 
-
-
-        {/* Step 10 */}
         <section>
           <h3 className="text-xl font-bold mb-2 text-black">
             Step 10: Commit and Push to GitHub
@@ -423,7 +396,6 @@ export default function Home() {\n
           </p>
         </section>
 
-        {/* Step 11 */}
         <section className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold text-indigo-600 mb-2">
             Step 11: Deploy Using Vercel
@@ -434,14 +406,16 @@ export default function Home() {\n
           </p>
         </section>
 
-        {/* Conclusion */}
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-black">Conclusion</h2>
-          <p className="text-gray-700 leading-relaxed">
-            By following these steps, Tailwind CSS is successfully used inside a
-            Next.js application. This approach is efficient, beginner-friendly,
-            and follows industry best practices for modern web development.
-          </p>
+<h2 className="text-2xl font-bold mb-4 text-black text-center">
+  CONGRATULATIONS
+</h2>
+            
+      <div className="flex flex-col items-center">
+        <img src="https://media.tenor.com/DN4JBeneqdkAAAAM/congratulations-evangelion.gif" className="rounded shadow-md w-70 h-50" />
+      </div>
+
+         
         </section>
 
         <section className="bg-white p-6 rounded-lg shadow">
@@ -450,7 +424,6 @@ export default function Home() {\n
     Each element below has its own code block and copy button. Labels show which utilities are applied.
   </p>
 
-  {/* Buttons Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Buttons</h3>
     <div className="flex gap-4 flex-wrap items-center mb-3">
@@ -483,7 +456,6 @@ export default function Home() {\n
     </div>
   </div>
 
-  {/* Color Palette Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Color Palette</h3>
     <div className="grid grid-cols-6 gap-4 mb-3">
@@ -515,7 +487,6 @@ export default function Home() {\n
     </div>
   </div>
 
-  {/* Typography Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Typography</h3>
     <p className="text-xl font-bold text-gray-900 mb-2">Heading 1 - Extra Large <span className="text-xs text-gray-400 ml-2">text-xl font-bold</span></p>
@@ -542,7 +513,6 @@ export default function Home() {\n
     </div>
   </div>
 
-  {/* Grid Layout Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Grid Layout</h3>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
@@ -578,7 +548,6 @@ export default function Home() {\n
     </div>
   </div>
 
-  {/* Flex Layout Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Flex Layout</h3>
     <div className="flex flex-wrap gap-4 justify-center mb-3">
@@ -614,7 +583,6 @@ export default function Home() {\n
     </div>
   </div>
 
-  {/* Images Demo */}
   <div className="mb-6">
     <h3 className="text-xl font-bold mb-2 text-black">Images</h3>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
@@ -657,7 +625,6 @@ export default function Home() {\n
 </section>
       </main>
 
-      {/* Footer */}
       <footer className="bg-gray-800 text-white py-6 text-center">
         <p className="font-semibold">Tailwind CSS Tutorial Blog By Anicett Jeff Takayama</p>
         <p className="text-sm text-gray-400">
